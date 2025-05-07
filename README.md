@@ -58,7 +58,7 @@ $ $
   <img src="images/input-1.gif" width="550" height="200" />
 </p>
 
-2. 支持对选中内容的快速替换；
+1. 支持对选中内容的快速替换；
 
 <p align="center">
   <img src="images/input-2.gif" width="550", height="200" />
@@ -68,7 +68,9 @@ $ $
 
 3. 自定义片段的快速生成：
 
-
+<p align="center">
+  <img src="images/input-3.gif" width="550", height="200" />
+</p>
 
 
 > 具体使用方法可见[插件官方文档](https://github.com/draivin/hsnips) ;
@@ -82,7 +84,13 @@ $ $
 
 具体方法如下：
 - 手动创建函数生成对应图表：
+
+
+
+
 - 使用代码片段快速生成（前提：需要正确安装 `HyperSnippet`插件并导入`typst/hsnips`）：
+
+
 
 
 

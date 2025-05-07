@@ -482,19 +482,15 @@ endsnippet
 // 三线学术表
 snippet table-3 "三线学术表" iA
 #figure( 
-    table(
-        columns: 3,
-        align: center,
-        table.header(
-            [3],[3], [3]
-        ), 
-        [conent], [conent], [conent], 
-        [conent], [conent], [conent], 
-       table.footer(
-            [conent], [conent], [conent],
-        ), 
-    ), 
-caption:[ table's name]
+  tab_line_table(
+    (
+      ([$1], [$2], [$3]),
+      ([$4], [$5], [$6],),
+      ([$7],[$8], [$9],)
+    )
+  ),
+  kind: table,
+  caption: [${10:caption}]
 )
 endsnippet
 

@@ -53,7 +53,7 @@
   
   #grid(
     align: center,
-    columns: (80pt, 250pt),
+    columns: (120pt, 250pt),
     row-gutter: 2em,
     paper-title(text("题" + h(4pt) + text("目："))),
     paper-title(text(title))

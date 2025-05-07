@@ -79,6 +79,9 @@ xxxxx 可表示为：
 
 $ L_0 = 1/2N^(1/2)_1N^(1/2)_2N^(-2)M^(-1) $ 
 
+公式、表格、图示的编号均采用“章节-序号”编号，序号从1开始，如：X-1；表X-1；
+
+\ 
 
 表格：（采用三线表设计表格，表序和表题写在表格上方正中，表题末尾不加标点）
 
@@ -111,7 +114,7 @@ $ L_0 = 1/2N^(1/2)_1N^(1/2)_2N^(-2)M^(-1) $
     )
   ),
   kind: table,
-  caption: [三线表示例]
+  caption: [B Company Annual Report Data]
 )<table-1>
 
 针对表格的引用需要以 `@`+`tbl`+`<标签名>`的格式引用，比如： @tbl:table-1 所示 ....
@@ -229,95 +232,6 @@ $ L_0 = 1/2N^(1/2)_1N^(1/2)_2N^(-2)M^(-1) $
 ```
 ]
 
-
-
-图表的生成 
-
-通过第三方库 `lilaq` 和 `` 进行图表的生成，此处对以上部分进行了函数封装，预定了部分图表样式，只需部分函数即可生成对应的图表类型，降低了图表生成的门槛；
-
-
-
-#let value_1 = range(1, 9)
-#let value_2 = value_1.map(x => calc.pow(x ,2))
-#let month = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug")
-
-#let rng = suiji.gen-rng(33)
-#let (rng, x) = suiji.uniform(rng, size: 20)
-#let (rng, y) = suiji.uniform(rng, size: 20)
-
-
-#let data = (
-  ([Belgium],     24),
-  ([Germany],     31),
-  ([Greece],      18),
-  ([Spain],       21),
-  ([France],      23),
-)
-
-#stack(
-  dir: ltr,
-  spacing: 2em,
-    set_plot_kinds(
-    kinds: "line",
-    x轴标签: [],
-    y轴标签: [ylabel],
-    图名称: [],
-    数据_1: value_1,
-    数据_2: value_2,
-    ),
-    set_plot_kinds(
-      kinds: "bar",
-      x轴标签: [],
-      y轴标签: [asdasd],
-      图名称: [asdasda],
-      数据_1: value_1,
-      数据_2: value_2,
-    )
-)
-
-
-
-#stack(
-  dir: ltr,
-  spacing: 2em,
-  set_plot_kinds(
-    kinds: "cmg",
-    x轴标签: [],
-    y轴标签: [asdasd],
-    图名称: [asdasda],
-    数据_1: value_1,
-    数据_2: value_2,
-    数据_3: month,
-    标签_1: [aasdasd],
-    标签_2: [sadasd]
-  ),
-  set_plot_kinds(
-    kinds: "scatter",
-    x轴标签: [],
-    y轴标签: [],
-    数据_1: value_1,
-    数据_2: value_2,
-  )
-)
-
-#figure(
-  set_plot_kinds(
-  kinds: "pie",
-  数据_1: data,
-)
-,
-  caption: []
-)<001>
-
-上述生产图表也同样支持引用操作： 具体数据如 @fig:001 所示 .... 
-
-
-这里以“泰勒公式”为例：
-
-$ f(x) = f(a) + (f'(a))/(1!)(x-a) + (f''2(a))/(2!)(x-a)^2 + #sym.dots.h 
-(f^((n+1))(xi))/((n+1)!)(x-a)^(n+1) $<equation>
-
-对泰勒公式进行引用：@eqt:equation 所示....
 
 
 

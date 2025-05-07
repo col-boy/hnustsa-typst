@@ -25,8 +25,9 @@ This is the template of hnustsa
 - 将解压缩的文档拖入 Vscode 中，找到 `template-main.typ` 文件；
 - 按下快捷键 `Ctrl + K + V`(Windows) 或 `Command + K + V`(MacOS) 或点击右上角按钮，即可进行编译和预览；
 
-- [ ] gif
+<img src="images/totular-1.gif" style="max-width: 100%; height: auto;" />
 
+> 如果本地缺失相关字体，可以手动安装 `fonts` 文件内字体；
 
 ## 3.3 官方在线编辑
 - 官方也提供了 [Web App](https://typst.app/) 的支持，但是需要手动上传「中文字体」文件；
@@ -90,7 +91,7 @@ $ $
 # 注意事项：
 
 1. 权威性问题：模板按照「2025 届海南科技职业大学本科毕业论文模板要求」格式进行编排，但部分内容存在「主观成分」且不同学院之间模板内容插在些许差异，可能存在些许 `bug` 欢迎在 `issue` 提问交流。
-2. 后期维护：由于个人精力有限，欢迎有兴趣的人进行 `commint` ；
+2. 后期维护：由于个人精力有限，欢迎有兴趣的人进行 `commit` ；
 3. 该模板在 `MacOS`系统上进行了完整测试，`Windows` 只进行了部分测试；
 
 
@@ -104,13 +105,6 @@ $ $
 - [typst-examples-book](https://github.com/sitandr/typst-examples-book?tab=readme-ov-file) - Typst Examples Book Typst 示例手册
 
 
-
-## 使用指南
-
-
-高度：350 宽度：550
-
-asd
 
 
 

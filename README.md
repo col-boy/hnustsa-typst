@@ -28,7 +28,7 @@ This is the template of hnustsa
 - [ ] gif
 
 
-## 3.3 官方在线编辑（不推荐）
+## 3.3 官方在线编辑
 - 官方也提供了 [Web App](https://typst.app/) 的支持，但是需要手动上传「中文字体」文件；
 
 
@@ -42,6 +42,8 @@ This is the template of hnustsa
 - Mac: `$HOME/Library/Application Support/Code/User/globalStorage/draivin.hsnips/hsnips/(language).hsnip`
 
 也可以通过在 `Vscode` 中输入对应的命令找到文件并将对应的 `typst.hsnips` 代码放入其中，具体如下所示：
+
+  
 
 
 
@@ -64,11 +66,10 @@ This is the template of hnustsa
 
 
 
-
 # 注意事项：
 
 1. 权威性问题：模板按照「2025 届海南科技职业大学本科毕业论文模板要求」格式进行编排，但部分内容存在「主观成分」且不同学院之间模板内容插在些许差异，可能存在些许 `bug` 欢迎在 `issue` 提问交流。
-2. 后期维护：由于个人精力有限，希望有兴趣的人进行 `fork` ；
+2. 后期维护：由于个人精力有限，欢迎有兴趣的人进行 `commint` ；
 3. 该模板在 `MacOS`系统上进行了完整测试，`Windows` 只进行了部分测试；
 
 

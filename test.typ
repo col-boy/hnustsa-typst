@@ -1,12 +1,12 @@
 #import "template-main.typ": *
 
-// 版本更新后部分属性不再使用 project.with
+// 版本更新后部分属性不再使用 doc.with
 #show: doc.with(
   abstract_zh: [
    山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟吾德馨。苔痕上阶绿，草色入帘青。谈笑有鸿儒，往来无白丁。可以调素琴，阅金经。无丝竹之乱耳，无案牍之劳形。南阳诸葛庐，西蜀子云亭。孔子云：何陋之有？
   ],
   abstract_en: [ 
-  A mountain does not need to be high; it is famous if it has immortals. Water does not need to be deep; it is lively when there is a dragon. This is a humble abode, but my virtue is fragrant. The moss marks the steps up green, and the grass color seeps into the curtain blue. There are scholars in conversation and laughter, but no ordinary people in social interactions. One can play the plain zither and read the golden scriptures. There is no string or wind instruments to confuse the ear, and no desk paper work to strain the body. Nanyang Zhuge's Hut, Xishu Ziyun's Pavilion. Confucius said, "What is there to be ignorant of?"
+  A mountain does not need tko be high; it is famous if it has immortals. Water does not need to be deep; it is lively when there is a dragon. This is a humble abode, but my virtue is fragrant. The moss marks the steps up green, and the grass color seeps into the curtain blue. There are scholars in conversation and laughter, but no ordinary people in social interactions. One can play the plain zither and read the golden scriptures. There is no string or wind instruments to confuse the ear, and no desk paper work to strain the body. Nanyang Zhuge's Hut, Xishu Ziyun's Pavilion. Confucius said, "What is there to be ignorant of?"
   ],
   keywords_zh: ("关键词1", "关键词2", "关键词3"),
   keywords_en: ("keyword-1", "keyword-2", "keyword3"),
@@ -198,6 +198,7 @@ $ f(x) = f(a) + (f'(a))/(1!)(x-a) + (f''2(a))/(2!)(x-a)^2 + #sym.dots.h
 
 == 快捷键的绑定
 
+使用 `Vim` 插件可以实现快速的文本编辑
 
 #pagebreak()
 
@@ -205,7 +206,7 @@ $ f(x) = f(a) + (f'(a))/(1!)(x-a) + (f''2(a))/(2!)(x-a)^2 + #sym.dots.h
 
 == 相关插件的助力
 
-asd 
+
 
 $1 plus 2 minus alpha times 3 $
 

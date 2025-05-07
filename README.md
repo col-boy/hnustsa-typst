@@ -41,9 +41,11 @@ This is the template of hnustsa
 - Windows： `%APPDATA%\Code\User\globalStorage\draivin.hsnips\hsnips\(language).hsnips`
 - Mac: `$HOME/Library/Application Support/Code/User/globalStorage/draivin.hsnips/hsnips/(language).hsnip`
 
-也可以通过在 `Vscode` 中输入对应的命令找到文件并将对应的 `typst.hsnips` 代码放入其中，具体如下所示：
+也可以通过在 `Vscode` 中输入对应的命令找到文件并将对应的 `typst.hsnips` 代码放入其中，具体操作如下：
 
-  
+$ $
+
+
 
 
 
@@ -51,6 +53,21 @@ This is the template of hnustsa
 
 接下来就可以实现数学公式的快速输入了！
 
+1. 数学环境的快速输入:
+<p align="center">
+  <img src="images/input-1.gif" width="550" height="200" />
+</p>
+
+2. 支持对选中内容的快速替换；
+
+<p align="center">
+  <img src="images/input-2.gif" width="550", height="200" />
+</p>
+
+实质：会保存最近选中的内容, 然后替换掉为代码片段设置的部分；在作者 [OrangeX4](https://marketplace.visualstudio.com/items/?itemName=OrangeX4.hsnips)开发的插件中也有对类似功能的介绍；
+
+
+1. 语法会保存最近选中的内容 (5 秒内), 然后替换掉 ${VISUAL} 部分.
 
 
 
@@ -90,7 +107,7 @@ This is the template of hnustsa
   <img src="images/01.gif" width="550" />
 </p>
 
-
+高度：350 宽度：550
 
 asd
 

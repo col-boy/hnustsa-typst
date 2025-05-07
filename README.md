@@ -85,6 +85,10 @@ $ $
 具体方法如下：
 - 手动创建函数生成对应图表：
 
+<p align="center">
+  <img src="images/generate-image-1.gif" width="550", height="350" />
+</p>
+
 
 
 

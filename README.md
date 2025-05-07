@@ -48,10 +48,12 @@ This is the template of hnustsa
 
 接下来就可以实现数学公式的快速输入了！
 
+> 如果你的 `Hypersnippet` 没有反应，可以尝试重启 `Vscode` ；
+
 1. 数学环境的快速输入:
 <img src="images/input-1.gif" style="max-width: 100%; height: auto;" />
 
-1. 支持对选中内容的快速替换；
+2. 支持对选中内容的快速替换；
 
 <img src="images/input-2.gif" style="max-width: 100%; height: auto;" />
 
@@ -85,7 +87,6 @@ This is the template of hnustsa
 1. 权威性问题：模板按照「2025 届海南科技职业大学本科毕业论文模板要求」格式进行编排，但部分内容存在「主观成分」且不同学院之间模板内容插在些许差异，可能存在些许 `bug` 欢迎在 `issue` 提问交流。
 2. 后期维护：由于个人精力有限，欢迎有兴趣的人进行 `commit` ；
 3. 该模板在 `MacOS`系统上进行了完整测试，`Windows` 只进行了部分测试；
-
 
 
 # 参考内容

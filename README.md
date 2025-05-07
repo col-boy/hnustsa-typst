@@ -36,7 +36,7 @@ This is the template of hnustsa
 
 ## 图像快速生成
 
-
+模板引入了第三方包 ``
 
 
 # 注意事项：

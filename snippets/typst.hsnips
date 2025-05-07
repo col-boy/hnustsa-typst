@@ -479,5 +479,24 @@ snippet spkt "模板图" i
   )
 endsnippet
 
+// 三线学术表
+snippet table-3 "三线学术表" iA
+#figure( 
+    table(
+        columns: 3,
+        align: center,
+        table.header(
+            [3],[3], [3]
+        ), 
+        [conent], [conent], [conent], 
+        [conent], [conent], [conent], 
+       table.footer(
+            [conent], [conent], [conent],
+        ), 
+    ), 
+caption:[ table's name]
+)
+endsnippet
+
 
 

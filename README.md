@@ -39,7 +39,7 @@ This is the template of hnustsa
 在 `Vscode`中下载 [HyperSnips](https://marketplace.visualstudio.com/items/?itemName=draivin.hsnips) 插件，并将 `snippets/typst.hsnips` 文件拖动或复制到对应目录下：
 
 - Windows： `%APPDATA%\Code\User\globalStorage\draivin.hsnips\hsnips\(language).hsnips`
-- Mac: `$HOME/Library/Application Support/Code/User/globalStorage/draivin.hsnips/hsnips/(language).hsnip`
+- Mac:`$HOME/Library/ApplicationSupport/Code/User/globalStorage/draivin.hsnips/hsnips/(language).hsnip`
 
 也可以通过在 `Vscode` 中输入对应的命令找到文件并将对应的 `typst.hsnips` 代码放入其中，具体操作如下：
 
@@ -118,7 +118,6 @@ $ $
 高度：350 宽度：550
 
 asd
-
 
 
 

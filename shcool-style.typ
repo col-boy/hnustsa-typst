@@ -73,13 +73,15 @@
 
 公式：（必须用 word 公式编辑器编辑）
 
-$ L_0 = sqrt(N_1N_2)/(2N^2M) $ 
+$ L_0 = sqrt(N_1N_2)/(2N^2M) $<equation>
 
 xxxxx 可表示为：
 
 $ L_0 = 1/2N^(1/2)_1N^(1/2)_2N^(-2)M^(-1) $ 
 
 公式、表格、图示的编号均采用“章节-序号”编号，序号从1开始，如：X-1；表X-1；
+
+公式的引用需要以 `@+eqt:+<label>` 的形式：正如 @eqt:equation 所示
 
 \ 
 
@@ -99,24 +101,7 @@ $ L_0 = 1/2N^(1/2)_1N^(1/2)_2N^(-2)M^(-1) $
   ),
   kind: table,
   caption: [H Company Annual Report Data]
-)
-
-#figure(
-  tab_line_table(
-    (
-      ("Item", "2023 (Current Period)", "2022 (Previous Period)"),
-      ("Total Revenue (billion USD)", "96.8", "81.5"),
-      ("Net Income (billion USD)", "7.0", "12.6"),
-      ("Total Assets (billion USD)", "102.0", "82.3"),
-      ("Net Income Attributable to Shareholders (billion USD)", "7.0", "12.6"),
-      ("Net Cash Flow from Operating Activities (billion USD)", "13.9", "14.7"),
-      ("Earnings per Share (USD)", "2.18", "3.62")
-    )
-  ),
-  kind: table,
-  caption: [B Company Annual Report Data]
 )<table-1>
-
 针对表格的引用需要以 `@`+`tbl`+`<标签名>`的格式引用，比如： @tbl:table-1 所示 ....
 
 

@@ -44,20 +44,14 @@ This is the template of hnustsa
 
 也可以通过在 `Vscode` 中输入对应的命令找到文件并将对应的 `typst.hsnips` 代码放入其中，具体操作如下：
 
-$ $
-
-
-
-
-
-实现「快速输入」
+<img src="images/Hypersnippet.gif" style="max-width: 100%; height: auto;" />
 
 接下来就可以实现数学公式的快速输入了！
 
 1. 数学环境的快速输入:
 <img src="images/input-1.gif" style="max-width: 100%; height: auto;" />
 
-2. 支持对选中内容的快速替换；
+1. 支持对选中内容的快速替换；
 
 <img src="images/input-2.gif" style="max-width: 100%; height: auto;" />
 
@@ -68,8 +62,6 @@ $ $
 <img src="images/input-3.gif" style="max-width: 100%; height: auto;" />
 
 > 具体使用方法可见[插件官方文档](https://github.com/draivin/hsnips) ;
-
-
 
 
 ## 4.2 图像快速生成

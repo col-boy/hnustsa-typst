@@ -181,22 +181,29 @@
 
 /* 测试的数据集 */
 
-
-
 /*  使用案例  */
 
-#figure(
-  set_plot_kinds(
-  kinds: "line",
-  x轴标签: [asdasdasd],
-  y轴标签: [asdasd],
-  图名称: [asdasd],
-  数据_1: value_1,
-  数据_2: value_2,
-),
-  caption: [caption]
-)<label>
+// #figure(
+//   set_plot_kinds(
+//   kinds: "line",
+//   x轴标签: [asdasdasd],
+//   y轴标签: [asdasd],
+//   图名称: [asdasd],
+//   数据_1: value_1,
+//   数据_2: value_2,
+// ),
+//   caption: [caption]
+// )<label>
 
+
+// #set_plot_kinds(
+//   kinds: "bar",
+//   x轴标签: [asdasd],
+//   y轴标签: [asdasd],
+//   图名称: [asdasda],
+//   数据_1: value_1,
+//   数据_2: value_2,
+// )<label>
 
 // #set_plot_kinds(
 //   kinds: "cmg",
@@ -208,18 +215,18 @@
 //   数据_3: month,
 //   标签_1: [aasdasd],
 //   标签_2: [sadasd]
-// )
+// )<label>
 
 // #set_plot_kinds(
 //   kinds: "scatter",
 //   数据_1: value_1,
 //   数据_2: value_2,
-// )
+// )<label>
 
 // #set_plot_kinds(
 //   kinds: "pie",
 //   数据_1: data,
-// )
+// )<label>
 
 // 标准化模板
 
@@ -233,6 +240,6 @@
 //   数据_3: month,
 //   标签_1: [aasdasd],
 //   标签_2: [sadasd]
-// )
+// )<label>
 
 /*  使用案例  */

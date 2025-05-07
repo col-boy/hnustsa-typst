@@ -66,8 +66,7 @@ $ $
 
 实质：会保存最近选中的内容, 然后替换掉为代码片段设置的部分；在作者 [OrangeX4](https://marketplace.visualstudio.com/items/?itemName=OrangeX4.hsnips)开发的插件中也有对类似功能的介绍；
 
-
-1. 语法会保存最近选中的内容 (5 秒内), 然后替换掉 ${VISUAL} 部分.
+3. 自定义片段的快速生成：
 
 
 
@@ -79,7 +78,19 @@ $ $
 
 ## 4.2 图像快速生成
 
-该模板引入了第三方包 [Lilaq](https://lilaq.org/) 和 [cetz-plot](https://github.com/cetz-package/cetz-plot) 并自定义的相关函数来支持图表的快速生成，具体可参考 `extra-function/set-plot.typ`中的代码内容；
+该模板引入了第三方包 [Lilaq](https://lilaq.org/) 和 [cetz-plot](https://github.com/cetz-package/cetz-plot) 并自定义的相关函数`set-plot-kinds()`来支持图表的快速生成，具体可参考 `extra-function/set-plot.typ`中的代码内容；
+
+具体方法如下：
+- 手动创建函数生成对应图表：
+- 使用代码片段快速生成（前提：需要正确安装 `HyperSnippet`插件并导入`typst/hsnips`）：
+
+
+
+
+> 如果图表的样式与实际存在差异，可以通过 `set-plot-typ` 代码文件进行样式微调；
+
+
+
 
 
 
@@ -103,14 +114,10 @@ $ $
 
 ## 使用指南
 
-<p align="center">
-  <img src="images/01.gif" width="550" />
-</p>
 
 高度：350 宽度：550
 
 asd
-
 
 
 

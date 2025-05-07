@@ -386,12 +386,98 @@ endsnippet
 
 
 
-// 海科大模板的自定义代码片段
+// 模板的自定义代码片段
 
-snippet spkf "set_plot_kinds - figure"
+snippet spkf "set_plot_kinds - figure" i
 #figure(
   ${3:}``rv = visual``,
   caption: [${2:caption}]
 )<${1:label}>
 endsnippet
+
+// 相关图表代码片断
+
+snippet spkl "直线图" i
+#figure(
+  set_plot_kinds(
+    kinds: "line",
+    x轴标签: [$1],
+    y轴标签: [$2],
+    图名称: [$3],
+    数据_1: ${4: value_1},
+    数据_2: ${5: value_2},
+  ),
+  caption: [$6]
+)<$7>
+endsnippet
+
+snippet spkb "条形图" i
+#figure(
+  set_plot_kinds(
+    kinds: "bar",
+    x轴标签: [${1: xlabel}],
+    y轴标签: [${2: ylabel}],
+    图名称: [${3: name}],
+    数据_1: ${4: value_1},
+    数据_2: ${5: value_2},
+  ),
+  caption: [${6: caption}]
+)<$7>
+endsnippet
+
+snippet spkcm "组合图" i
+#figure(
+  set_plot_kinds(
+    kinds: "cmg",
+    x轴标签: [$1],
+    y轴标签: [$2],
+    图名称: [$3],
+    数据_1: ${4:value_1},
+    数据_2: ${5:value_2},
+    数据_3: ${6:month},
+    标签_1: [$7],
+    标签_2: [$8]
+  ),
+  caption: [$6]
+)<$7>
+endsnippet
+
+snippet spks "散点图" i
+#figure(
+  set_plot_kinds(
+    kinds: "scatter",
+    数据_1: ${1: value_1},
+    数据_2: ${2: value_2},
+  ),
+  caption: [$3]
+)<$4>
+endsnippet
+
+snippet spkp "饼图" i
+#figure(
+  set_plot_kinds(
+    kinds: "pie",
+    数据_1: data,
+  ),
+  caption: [$3]
+)<$4>
+endsnippet
+
+
+// 该模板包含了当前图表的所有样式！
+snippet spkt "模板图" i
+#set_plot_kinds(
+    kinds: ${1: "line"},
+    x轴标签: [${2: x-label}],
+    y轴标签: [${3: y-label}],
+    图名称: [${4: name}],
+    数据_1: value_1,
+    数据_2: value_2,
+    数据_3: month,
+    标签_1: [],
+    标签_2: [sadasd]
+  )
+endsnippet
+
+
 

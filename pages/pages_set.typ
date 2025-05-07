@@ -5,10 +5,10 @@
   set page(
     paper: "a4",
     margin: (
-      top: 2.5cm,
-      bottom: 2.5cm,
-      left: 3cm,
-      right: 2.5cm,
+      top: 2.8cm,
+      bottom: 2.8cm,
+      left: 2.8cm,
+      right: 2.8cm,
     ),
     binding: left,
   )
@@ -60,11 +60,14 @@
         font: font_style.宋体, 
         size: 10pt, 
         baseline: -3pt, 
-        counter(page).display("I")
-        )
+        if counter(page).display("I") == "I" {
+          "I"
+        } else {
+          none // 目录部分均不要页码
+        } 
+      )
     }
   )
-
   body
 }
 
@@ -88,6 +91,9 @@
 
   body
 }
+
+
+
 
 
 

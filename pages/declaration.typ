@@ -14,7 +14,7 @@
 
 #text(font: font_style.宋体, size: font_size.四号)[
   #set par(justify: true, leading: 1.24em, first-line-indent: 2em)
-  本人郑重声明：所呈交的毕业设计（论文）是本人在导师的指导 下取得的成果，毕业设计（论文）写作严格遵循学术规范。对本设计 （论文）的研究做出重要贡献的个人和集体，均已在文中以明确方式 标明。本人对所写的内容负责，如有违规行为发生，自愿承担一切责任。 ]
+  本人郑重声明：所呈交的毕业设计（论文）是本人在导师的指导 下取得的成果，毕业设计（论文）写作严格遵循学术规范。对本设计 （论文）的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人对所写的内容负责，如有违规行为发生，自愿承担一切责任。 ]
 
 \ 
 
@@ -22,7 +22,7 @@
 #text(font: font_style.宋体, size: font_size.四号)[
   #grid(
     columns: (auto, auto),
-    column-gutter: 8.5em,
+    column-gutter: 8em,
     row-gutter: 1.24em,
     [毕业设计（论文）作者签名：],
     [日期：#h(15pt) 年 #h(9pt) 月 #h(9pt) 日],
@@ -43,7 +43,7 @@
 #text(font: font_style.宋体, size: font_size.四号)[
   #grid(
   columns: (auto, auto),
-  column-gutter: 8.5em,
+  column-gutter: 8em,
   row-gutter: 1.24em,
   [毕业设计（论文）作者签名：],
   [指导教师签名],

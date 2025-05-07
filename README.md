@@ -54,24 +54,17 @@ $ $
 接下来就可以实现数学公式的快速输入了！
 
 1. 数学环境的快速输入:
-<p align="center">
-  <img src="images/input-1.gif" width="550" height="200" />
-</p>
+<img src="images/input-1.gif" style="max-width: 100%; height: auto;" />
 
-1. 支持对选中内容的快速替换；
+2. 支持对选中内容的快速替换；
 
-<p align="center">
-  <img src="images/input-2.gif" width="550", height="200" />
-</p>
+<img src="images/input-2.gif" style="max-width: 100%; height: auto;" />
 
 实质：会保存最近选中的内容, 然后替换掉为代码片段设置的部分；在作者 [OrangeX4](https://marketplace.visualstudio.com/items/?itemName=OrangeX4.hsnips)开发的插件中也有对类似功能的介绍；
 
 3. 自定义片段的快速生成：
 
-<p align="center">
-  <img src="images/input-3.gif" width="550", height="200" />
-</p>
-
+<img src="images/input-3.gif" style="max-width: 100%; height: auto;" />
 
 > 具体使用方法可见[插件官方文档](https://github.com/draivin/hsnips) ;
 
@@ -85,25 +78,13 @@ $ $
 具体方法如下：
 - 手动创建函数生成对应图表：
 
-<p align="center">
-  <img src="images/generate-image-1.gif" width="550", height="350" />
-</p>
-
-
-
+<img src="images/generate-image-1.gif" style="max-width: 100%; height: auto;" />
 
 - 使用代码片段快速生成（前提：需要正确安装 `HyperSnippet`插件并导入`typst/hsnips`）：
 
-
-
-
-
+<img src="images/generate-image-2.gif" style="max-width: 100%; height: auto;" />
 
 > 如果图表的样式与实际存在差异，可以通过 `set-plot-typ` 代码文件进行样式微调；
-
-
-
-
 
 
 # 注意事项：

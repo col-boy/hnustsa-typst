@@ -25,7 +25,7 @@ This is the template of hnustsa
 - 将解压缩的文档拖入 Vscode 中，找到 `template-main.typ` 文件；
 - 按下快捷键 `Ctrl + K + V`(Windows) 或 `Command + K + V`(MacOS) 或点击右上角按钮，即可进行编译和预览；
 
-
+- [ ] gif
 
 
 ## 3.3 官方在线编辑（不推荐）
@@ -36,9 +36,26 @@ This is the template of hnustsa
 
 ## 4.1 数学公式快速输入
 
-在 `Vscode`中下载 [HyperSnips](https://marketplace.visualstudio.com/items/?itemName=draivin.hsnips) 插件，并将 `snippets/typst.hsnips` 文件内容
+在 `Vscode`中下载 [HyperSnips](https://marketplace.visualstudio.com/items/?itemName=draivin.hsnips) 插件，并将 `snippets/typst.hsnips` 文件拖动或复制到对应目录下：
+
+- Windows： `%APPDATA%\Code\User\globalStorage\draivin.hsnips\hsnips\(language).hsnips`
+- Mac: `$HOME/Library/Application Support/Code/User/globalStorage/draivin.hsnips/hsnips/(language).hsnip`
+
+也可以通过在 `Vscode` 中输入对应的命令找到文件并将对应的 `typst.hsnips` 代码放入其中，具体如下所示：
+
+
 
 实现「快速输入」
+
+接下来就可以实现数学公式的快速输入了！
+
+
+
+
+
+> 具体使用方法可见[插件官方文档](https://github.com/draivin/hsnips) ;
+
+
 
 
 ## 4.2 图像快速生成
@@ -48,11 +65,12 @@ This is the template of hnustsa
 
 
 
-
 # 注意事项：
 
 1. 权威性问题：模板按照「2025 届海南科技职业大学本科毕业论文模板要求」格式进行编排，但部分内容存在「主观成分」且不同学院之间模板内容插在些许差异，可能存在些许 `bug` 欢迎在 `issue` 提问交流。
 2. 后期维护：由于个人精力有限，希望有兴趣的人进行 `fork` ；
+3. 该模板在 `MacOS`系统上进行了完整测试，`Windows` 只进行了部分测试；
+
 
 
 # 参考内容

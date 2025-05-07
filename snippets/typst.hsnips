@@ -1,0 +1,397 @@
+// 定义文本的范围检测
+// 具体需要参考 Vscode 中的 TextMate 内容
+global
+function math(context) {
+    return context.scopes.some(s => s.includes("markup.math.typst")); }
+function code(context) {
+    return context.scopes.some(s => s.includes("markup.raw.block.typst")); }
+function comment(context) {
+    return context.scopes.some(s => s.includes("comment")); }
+endglobal
+
+// 定义 vsocde 中需要用到的变量
+global
+const vscode = require("vscode");
+var editor = vscode.window.activeTextEditor
+var document = editor.document
+endglobal
+
+
+// 定义选中文本的变量函数 $TM_SELECTED_TEXT variable
+global
+let visual = "";
+vscode.window.onDidChangeTextEditorSelection((e) => {
+    const newSelectedText = e.textEditor.document.getText(e.selections[0]);
+    if (newSelectedText) {
+    visual = newSelectedText.replace(/\\\\/g,"\\\\\\ ").replace(/\}/g, "\\}");
+  }
+});
+endglobal
+
+
+// 定义简单的日期函s数
+snippet day "Current flag number" w
+``rv = Math.floor((new Date() - new Date("May 29, 2001")) / (1000 * 60 * 60 *24)); ``
+endsnippet
+
+snippet dtt "Current time" wA
+``rv = "\`" + new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit", hour12: false}) + "\`" `` $0
+endsnippet
+
+snippet ddd "Current date" w 
+``rv = new Date().toISOString().slice(0, 10)``
+endsnippet
+
+snippet ddt "Current date and time " wA
+`` 
+var currentDate = new Date();
+var isoString = currentDate.getFullYear() + 
+"-" + (currentDate.getMonth() + 1).toString().padStart(2, "0") + 
+"-" + currentDate.getDate().toString().padStart(2, "0") + 
+"T" + currentDate.getHours().toString().padStart(2, "0") + 
+":" + currentDate.getMinutes().toString().padStart(2, "0") + 
+":" + currentDate.getSeconds().toString().padStart(2, "0") +
+"+08:00"
+rv = isoString
+``
+endsnippet
+
+
+// 常用代码集合
+
+snippet pac "Package" b 
+#import "@preview/${1:package}:${2:ver}": $0
+endsnippet
+
+snippet tbl "Table figure" b 
+#figure(
+  table(
+    columns: (${3:c}),
+    align: (${4:auto}),
+    $0
+  ),
+  caption: [${1:caption}],
+) <tbl-${2:label}>
+endsnippet
+
+snippet fig "Image figure" b
+#figure(
+  image("$0", width: ${3:auto}, height: ${4:auto}),
+  caption: [${1:caption}],
+) <fig-${2:label}>
+endsnippet
+
+snippet codefig "Code figure" b
+#figure(
+  caption: [${1:caption}],
+)[
+\`\`\`${3:lang}
+$0
+\`\`\`
+] <code-${2:label}>
+endsnippet
+
+snippet terml "Term list" bA
+/ ${1:Term}: ${0:description}
+endsnippet
+
+// 数学模式
+# Ported from https://castel.dev/post/lecture-notes-1/#inline-and-display-math
+# Insert inline math block
+
+snippet sm "Inline Math" wA 
+$${1: ``rv = visual``}$ $0
+endsnippet
+
+snippet dm "Display Math" wA
+$ ${1: ``rv = visual``} $ $0
+endsnippet
+
+// 下标自动化
+context math(context)
+snippet `([A-Za-z])(\d)` "auto subscript" wA
+``rv = m[1];``_``rv = m[2]``
+endsnippet
+
+context math(context)
+snippet `([A-Za-z])_(\d)(\d)` "auto subscript" wA
+``rv = m[1]``_(``rv = m[2]``)
+endsnippet
+
+context math(context)
+snippet `(?<!i)tss` "text subscript" iA
+_("$1") $0
+endsnippet
+
+// 上标自动化
+context math(context)
+snippet sr "^2" iA
+^2
+endsnippet
+
+context math(context)
+snippet cb "^3" iA
+^3
+endsnippet
+
+context math(context)
+snippet invs "inverse" iA
+^(-$1)$0
+endsnippet
+
+context math(context)
+snippet sq "sqrt{}" iA
+sqrt(${1:``rv = visual``}) $0
+endsnippet
+
+// 箭头
+context math(context)
+snippet `(\d+,)` "over-dot" iA
+dot(``rv = m[1]``)
+endsnippet
+
+context math(context)
+snippet td "to the power / superscript" iA
+^($1)$0
+endsnippet
+
+// 修饰线
+
+context math(context)
+snippet conj "overline " iA
+overline($1)$0
+endsnippet
+
+priority 100
+context math(context)
+snippet `([A-Za-z])conj` "conj" iA
+overline(``rv = m[1]``)
+endsnippet
+
+
+
+// 分数快捷键
+
+context math(context)
+snippet // "Fraction" iA
+($1)/($2)$0
+endsnippet
+
+context math(context)
+snippet `((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/` "Fraction" wA
+(``rv = m[1]``)/($1)$0
+endsnippet
+
+// 在数学环境下，检测到你输入了 (...)/ 这样的表达式（分子部分用括号包裹），
+// 自动帮你把分子部分提取出来，并在后面插入 /()，光标跳到括号内，方便你直接输入分母，
+// 这样可以更方便地输入分数结构，例如 ((a+b)*c)/(d+e)。
+
+priority 1000
+context math(context)
+snippet `^.*\)/` "() Fraction" wA
+``
+let stripped = m[0].slice(0, -1);
+let depth = 0;
+let i = stripped.length - 1;
+while (true){
+    if (stripped[i] == ')') depth += 1;
+    if (stripped[i] == '(') depth -= 1;
+    if (depth == 0) break;
+    i -= 1;
+}
+rv = stripped.slice(0, i) + "(" + stripped.slice(i+1, -1) + ")";
+``/($1)$0
+endsnippet
+
+
+// 数学环境表达式
+
+// 矩阵 -- martix
+context math(context)
+snippet pmat "pmat" iA
+mat(delim: "(", $1) $0
+endsnippet
+
+context math(context) 
+snippet bmat "bmat" iA
+mat(delim: "[", $1) $0
+endsnippet
+
+context math(context)
+snippet case "cases" wA
+cases(
+    $1
+) $0
+endsnippet
+
+// vector -- 列向量
+context math(context)
+snippet cvec "column vector" iA
+vec(${1:x}, ${2: y}, dots.v ${3: z})
+endsnippet
+
+
+// 数学常用运算符
+
+priority 100
+context math(context)
+snippet ... "ldots" iA
+#sym.dots.h 
+endsnippet
+
+context math(context)
+snippet -- "equals" iA
+&= $1 \ $0
+endsnippet
+
+context math(context)
+snippet xx "times" iA
+ times 
+endsnippet
+
+context math(context)
+snippet notin "not in" iA
+in.not
+endsnippet
+
+context math(context)
+snippet ≠ "not equal" iA
+eq.not
+endsnippet
+
+context math(context)
+snippet +- "plus and mins" iA
+plus.minus
+endsnippet
+
+
+
+
+// 常用的数学括号
+
+// 向上取整函数
+context math(context)
+snippet ceil "ceil" iA
+ceil($1) $0
+endsnippet
+
+// 向下取整
+context math(context)
+snippet floor "floor" iA
+floor($1) $0
+endsnippet
+
+// 四舍五入
+context math(context)
+snippet round "round" iA
+round($1) $0
+endsnippet
+
+// 获取表达式的「范数」
+context math(context)
+snippet norm "norm" iA
+norm($1) $0
+endsnippet
+
+// 获取表达式的绝对值
+context math(context)
+snippet abs "abs" iA
+abs($1) $0
+endsnippet
+
+// 一下定界符都是支持整行替换的！
+context math(context)
+snippet lr( "left( right)" i
+lr(( ${1:``rv=visual``} )) $0
+endsnippet
+
+context math(context)
+snippet lr| "left| right|" i
+lr(abs( ${1:``rv=visual``} )) $0
+endsnippet
+
+context math(context)
+snippet lr{ "left\{ right\}" i
+lr({ ${1:``rv=visual``} }) $0
+endsnippet
+
+context math(context)
+snippet lr[ "left[ right]" i
+lr([ ${1:``rv=visual``} ]) $0
+endsnippet
+
+context math(context)
+snippet lra "leftangle rightangle" iA
+lr(angle.l ${1:``rv=visual``} angle.r) $0
+endsnippet
+
+
+// 常用的函数 -- Functions
+
+context math(context)
+snippet sum "sum" w
+sum_(n=${1:1})^(${2:infinity}) ${3:a_n z^n}
+endsnippet
+
+context math(context)
+snippet lim "limit" w
+lim_(${1:n} -> ${2:infinity}) 
+endsnippet
+
+priority 300
+context math(context)
+snippet iint "integral" wA
+integral_(${1:-infinity})^(${2:infinity}) ${3:``rv=visual``} $0
+endsnippet
+
+context math(context)
+snippet tt "text" iA
+"$1"$0
+endsnippet
+
+
+// 常用数学符号
+context math(context)
+snippet xnn "x_n" w
+x_($1)$0
+endsnippet
+
+context math(context)
+snippet ynn "y_n" iA
+y_($1)$0
+endsnippet
+
+
+// 数学字符 
+context math(context)
+snippet mcal "mathcal" iA
+cal($1)$0
+endsnippet
+
+context math(context)
+snippet nabl "nabla" iA
+nabla
+endsnippet
+
+context math(context)
+snippet OO "emptyset" iA
+diameter
+endsnippet
+
+// 空集
+context math(context)
+snippet null "emptyset" i
+diameter
+endsnippet
+
+
+
+// 海科大模板的自定义代码片段
+
+snippet spkf "set_plot_kinds - figure"
+#figure(
+  ${3:}``rv = visual``,
+  caption: [${2:caption}]
+)<${1:label}>
+endsnippet
+

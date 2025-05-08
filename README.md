@@ -3,7 +3,8 @@ This is the template of hnustsa
 
 ![](images/paper-cover.png)
 
-完整的 PDF [可在里获取](test.pdf)
+- 完整的学校模板 PDF： [可在里获取](shcool-style.pdf)
+- 教学版本 PDF：[可在里获取](toturial.pdf)
 
 # 2. Typst 是什么？
 - Typst 是一种「新型标记语言」，主要面向专业文档排版领域；

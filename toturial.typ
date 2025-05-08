@@ -208,9 +208,13 @@ $ f(x) = f(a) + (f'(a))/(1!)(x-a) + (f''2(a))/(2!)(x-a)^2 + #sym.dots.h
 
 \ 
 
+#box()
+
 == 相关插件的助力
 
-asd 
++ `HyperSnippet`: 插件配合数学公式的快速输入；
++ `Tinymist`: 插件的“代码补全、高亮”等特性使得 `Typst`的编写更加顺畅；
++ `Typst Sympy Calculator`: 自动进行科学计算
 
 $1 plus 2 minus alpha times 3 $
 
@@ -228,12 +232,8 @@ $
 + 是的
 
 
+$ 1 + 2 $ 
 
-
-
-
-
-#pagebreak()
 
 #bibliography("ref.bib")
 

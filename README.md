@@ -82,6 +82,10 @@ This is the template of hnustsa
 
 > 如果图表的样式与实际存在差异，可以通过 `set-plot-typ` 代码文件进行样式微调；
 
+## 4.3 符号式子的自动计算
+
+需要安装插件：`Typst Sympy Calculator`，具体用法请看[文档](https://github.com/OrangeX4/vscode-typst-sympy-calculator)；
+
 
 # 注意事项：
 

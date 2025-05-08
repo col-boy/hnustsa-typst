@@ -214,31 +214,21 @@ $ f(x) = f(a) + (f'(a))/(1!)(x-a) + (f''2(a))/(2!)(x-a)^2 + #sym.dots.h
 
 + `HyperSnippet`: 插件配合数学公式的快速输入；
 + `Tinymist`: 插件的“代码补全、高亮”等特性使得 `Typst`的编写更加顺畅；
-+ `Typst Sympy Calculator`: 自动进行科学计算
++ `Typst Sympy Calculator`: 自动进行科学计算，具体可参见 #link("https://github.com/OrangeX4/vscode-typst-sympy-calculator")[官方文档]
 
-$1 plus 2 minus alpha times 3 $
+$ integral_x^2 + 3x^2 = 5x => s $
 
-$ integral_x^2 + 3x^2 = 5x => s
-$
+== 编号测试
 
++ 四级标题
++ + 五级标题 // 需要优化
++ + + 
 
-
-== 编号设置
-
-===
-
-+ 阿萨德
-+ 是的
-+ 是的
-
-
-$ 1 + 2 $ 
 
 
 #bibliography("ref.bib")
 
 #pagebreak()
-
 
 #acknowledgement()[值此论文完成之际，谨向所有关心和帮助过我的师长、同学致以诚挚的谢意。感谢xxx教授的悉心指导，他/她严谨的治学态度与渊博的学识使我受益匪浅。感谢各位任课老师的谆谆教诲，感谢同窗好友的互帮互助。特别要感谢我的父母，是他们的支持与鼓励让我能够专心求学。在此，衷心感谢所有帮助过我的人，愿以此文献给你们！]
 

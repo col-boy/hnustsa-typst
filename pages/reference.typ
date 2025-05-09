@@ -4,8 +4,8 @@
 
   show bibliography: it => {
     set heading(level: 1, numbering: none)
-
-    set par(justify: false, leading: 1.24em, first-line-indent: 2em)
+    // 参考文献两端对齐
+    set par(justify: true, leading: 1.24em, first-line-indent: 2em)
     it
   } 
 

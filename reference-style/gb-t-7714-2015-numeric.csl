@@ -419,7 +419,8 @@
       </else>
     </choose>
   </macro>
-  <citation collapse="citation-number" after-collapse-delimiter=",">
+     <!-- 连续编号部分使用 - 而不是delimiter="," -->
+  <citation collapse="citation-number" after-collapse-delimiter="-">
     <layout vertical-align="sup" delimiter="," prefix="[" suffix="]">
       <text macro="citation-layout"/>
     </layout>

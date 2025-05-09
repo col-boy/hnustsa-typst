@@ -182,7 +182,11 @@
 
 == 参考文献的使用
 
-测试对参考文献的测试使用 #bib_cite(<impagliazzo2001problems>, <papadimitriou1998combinatorial>)  
+单次参考文献引用：张伟2021中国股票市场波动性分析#bib_cite(<张伟2021中国股票市场波动性分析>)
+
+多次参考文献的引用（文献编号需要连续）：smith and garcia2021blockchain #bib_cite(<smith2022deep>, <garcia2021blockchain>) 或 smith and garcia2021blockchain @smith2022deep@garcia2021blockchain
+
+参考文献的标签名：需要从 `ref.bib` 文件中寻找；目前知网等知名文献平台均支持下载 `bib` 文献格式，下载后将其直接导入/粘贴到文件 `ref.bib`中在进行引用即可！
 
 
 == 数学公式的演示
@@ -227,6 +231,7 @@ $ integral_x^2 + 3x^2 = 5x => s $
 2）
 3）
 
+#pagebreak()
 
 #bibliography("ref.bib")
 

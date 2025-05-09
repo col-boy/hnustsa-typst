@@ -23,6 +23,6 @@
     #text(weight: "bold", font: font_style.宋体, font_size.小四)[
       关键词：
       ]
-    #keywords.join("：")
+    #keywords.join("；")
   ]
 }
